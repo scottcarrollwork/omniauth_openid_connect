@@ -111,7 +111,7 @@ module OmniAuth
         raise CallbackError, error: params['error'], reason: error_description, uri: params['error_uri'] if error
         raise CallbackError, error: :csrf_detected, reason: "Invalid 'state' parameter" if invalid_state
 
-        return unless valid_response_type?
+        #return unless valid_response_type?
 
         options.issuer = issuer if options.issuer.nil? || options.issuer.empty?
 
